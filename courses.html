@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnglishUp — Курсы</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="courses.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <a class="logo" href="index.html">English<span>Up</span></a>
+    <nav class="navigation">
+        <a href="index.html">Главная</a>
+        <a class="active" href="courses.html">Курсы</a>
+        <a href="vocabulary.html">Словарь</a>
+        <a href="tests.html">Тесты</a>
+    </nav>
+</header>
+
+<main class="section">
+    <div class="section-heading">
+        <span class="tag">Твоя программа обучения</span>
+        <h1>Курсы английского языка</h1>
+        <p>Выбери уровень и изучай новые темы шаг за шагом.</p>
+    </div>
+
+    <div class="toolbar">
+        <input id="courseSearch" type="search" placeholder="Найти курс..." aria-label="Поиск курсов">
+        <select id="levelFilter" aria-label="Фильтр по уровню">
+            <option value="all">Все уровни</option>
+            <option value="A1">A1 — Beginner</option>
+            <option value="A2">A2 — Elementary</option>
+            <option value="B1">B1 — Intermediate</option>
+            <option value="B2">B2 — Upper-Intermediate</option>
+            <option value="C1">C1 — Advanced</option>
+            <option value="C2">C2 — Proficient</option>
+        </select>
+    </div>
+
+    <div id="courseGrid" class="grid">
+        <p>Загрузка курсов...</p>
+    </div>
+    <p id="courseMessage" class="empty-message" aria-live="polite"></p>
+
+    <section id="lessonArea" class="lesson-area" hidden>
+        <button id="closeLesson" class="btn btn-light">← Все курсы</button>
+        <div id="lessonContent"></div>
+    </section>
+</main>
+
+<footer class="footer">
+    <a class="logo" href="index.html">English<span>Up</span></a>
+    <p>© 2026 EnglishUp</p>
+</footer>
+</body>
+</html>

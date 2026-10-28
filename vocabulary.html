@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnglishUp — Словарь</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="vocabulary.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <a class="logo" href="index.html">English<span>Up</span></a>
+    <nav class="navigation">
+        <a href="index.html">Главная</a>
+        <a href="courses.html">Курсы</a>
+        <a class="active" href="vocabulary.html">Словарь</a>
+        <a href="tests.html">Тесты</a>
+    </nav>
+</header>
+
+<main class="section">
+    <div class="section-heading">
+        <span class="tag">Vocabulary</span>
+        <h1>Английский словарь</h1>
+        <p>Изучай новые слова, читай примеры и повторяй изученное.</p>
+    </div>
+
+    <div class="toolbar">
+        <input id="wordSearch" type="search" placeholder="Поиск слова или перевода..." aria-label="Поиск слов">
+        <select id="categoryFilter" aria-label="Категория слов">
+            <option value="all">Все категории</option>
+            <option value="Семья">Семья</option>
+            <option value="Учёба">Учёба</option>
+            <option value="Еда">Еда</option>
+            <option value="Путешествия">Путешествия</option>
+            <option value="Работа">Работа</option>
+            <option value="Повседневная жизнь">Повседневная жизнь</option>
+        </select>
+        <button id="favoritesToggle" class="btn btn-light">☆ Избранное</button>
+    </div>
+
+    <div class="vocab-stats">
+        <p>Слов в словаре: <strong id="wordCount">0</strong></p>
+        <p>В избранном: <strong id="favoriteCount">0</strong></p>
+    </div>
+
+    <div id="wordGrid" class="grid">
+        <p>Загрузка слов...</p>
+    </div>
+    <p id="wordMessage" class="empty-message" aria-live="polite"></p>
+
+    <section class="flashcard-area">
+        <h2>🃏 Карточки для запоминания</h2>
+        <p>Проверь, помнишь ли ты перевод слова.</p>
+        <div id="flashcard" class="flashcard">
+            <p id="flashWord">Нажми «Начать повторение»</p>
+            <p id="flashAnswer" hidden></p>
+        </div>
+        <div class="button-row">
+            <button id="startFlashcards" class="btn">Начать повторение</button>
+            <button id="revealFlashcard" class="btn btn-light" disabled>Показать перевод</button>
+            <button id="nextFlashcard" class="btn btn-light" disabled>Следующее слово →</button>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <a class="logo" href="index.html">English<span>Up</span></a>
+    <p>© 2026 EnglishUp</p>
+</footer>
+</body>
+</html>
